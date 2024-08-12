@@ -1,7 +1,7 @@
-name: Trigger Reusable Workflow
+name: Call_My_first_code
 
 on:
-  push:
+  workflow_dispath 
     branches:
       - main  # Adjust this to the branch you want to trigger this workflow
 
