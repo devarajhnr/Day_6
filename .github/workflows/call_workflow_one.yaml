@@ -1,0 +1,10 @@
+name: Trigger Reusable Workflow
+
+on:
+  push:
+    branches:
+      - main  # Adjust this to the branch you want to trigger this workflow
+
+jobs:
+  trigger-workflow:
+    uses: ./.github/workflows/main.yml
