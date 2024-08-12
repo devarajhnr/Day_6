@@ -10,12 +10,12 @@ jobs:
         run: echo "Job one is running"
 
   job_two:
-    runs-on:ubantu-latest
+    runs-on: ubantu-latest
     steps:
       - name: Run only if job_one is suceedes
         run:  echo " Job_two is running because job_one got succeeded"
-  if:success()
-    - name: Run only if job_one is suceeds
+  if: success()
+    - name: Run only if job_one is succeeds
       run: echo " Job_two is running because job_one got succeeded"
     - name: Run this steps only on the 'main' BRANCH
       if: github.ref+'refs/heads/main'
