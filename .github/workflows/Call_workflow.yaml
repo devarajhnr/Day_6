@@ -7,7 +7,7 @@ on:
 
 jobs:
   trigger-workflow:
-    uses: /.github/workflows/Reusable_workflow.yaml
+    uses: ./.github/workflows/Reusable_workflow.yaml
     with:
       mysql-version: '8.0'
       new-database: 'my_dynamic_db'
