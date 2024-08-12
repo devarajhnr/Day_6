@@ -1,21 +1,17 @@
-name: Conditional job execution example
-on: push
+on: [push]
 jobs:
   job_one:
-    runs-on: ubantu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
-      - name: Run command
-        run: echo "Job one is running"
+        uses: actions/checkout@v3     
+      - name: Run a command
+        run: echo "Job One is running"
 
   job_two:
-    runs-on: ubantu-latest
-    steps:
-      - name: Run only if job_one is suceedes
-        run:  echo " Job_two is running because job_one got succeeded"
-
-  if: success()
+    runs-on: ubuntu-latest
+    needs: job_one
+    if: success()
     steps:
       - name: Run only if job_one succeeds
         run: echo "Job Two is running because Job One succeeded"
