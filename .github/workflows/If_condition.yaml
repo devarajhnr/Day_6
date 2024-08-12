@@ -4,19 +4,20 @@ jobs:
   job_one:
     runs-on: ubantu-latest
     steps:
-      -name:Checkout code
+      - name: Checkout code
         uses: actions/checkout@v3
-      -name: Run command
+      - name: Run command
         run: echo "Job one is running"
+
   job_two:
     runs-on:ubantu-latest
     steps:
-      -name: Run only if job_one is suceedes
+      - name: Run only if job_one is suceedes
         run:  echo " Job_two is running because job_one got succeeded"
   if:success()
-    -name: Run only if job_one is suceeds
+    - name: Run only if job_one is suceeds
       run: echo " Job_two is running because job_one got succeeded"
-    -nameL Run this steps only on the 'main' BRANCH
+    - name: Run this steps only on the 'main' BRANCH
       if: github.ref+'refs/heads/main'
       run: echo "This steps runs only pm the main branch"
       
