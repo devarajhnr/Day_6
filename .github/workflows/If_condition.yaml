@@ -14,10 +14,14 @@ jobs:
     steps:
       - name: Run only if job_one is suceedes
         run:  echo " Job_two is running because job_one got succeeded"
+
   if: success()
-    - name: Run only if job_one is succeeds
-      run: echo " Job_two is running because job_one got succeeded"
-    - name: Run this steps only on the 'main' BRANCH
-      if: github.ref+'refs/heads/main'
-      run: echo "This steps runs only pm the main branch"
+    steps:
+      - name: Run only if job_one succeeds
+        run: echo "Job Two is running because Job One succeeded"
+      - name: Run this step only on the 'main' branch
+        if: github.ref == 'refs/heads/main'
+        run: echo "This step runs only on the main branch."
+
+
       
