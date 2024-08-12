@@ -7,4 +7,4 @@ on:
 
 jobs:
   trigger-workflow:
-    uses: ./.github/workflows/main.yml
+    uses: ./.github/workflows/My_first_code.yaml
