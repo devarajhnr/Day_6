@@ -1,9 +1,9 @@
 name: Call_My_first_code
 
 on:
-  workflow_dispath 
-    branches:
-      - main  # Adjust this to the branch you want to trigger this workflow
+  workflow_dispatch 
+    #branches:
+     # - main  # Adjust this to the branch you want to trigger this workflow
 
 jobs:
   trigger-workflow:
