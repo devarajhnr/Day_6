@@ -1,4 +1,4 @@
-name: Python CI Pipeline
+name: Matrix_strategy_includes_and_excludes
 
 on: [push, pull_request]
 
