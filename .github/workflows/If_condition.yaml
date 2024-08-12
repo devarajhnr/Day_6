@@ -1,3 +1,4 @@
+name: Conditional Job Execution Example
 on: 
   workflow_dispatch 
 jobs:
