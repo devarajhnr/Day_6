@@ -1,5 +1,5 @@
 
-name: Python CI Pipeline
+name: Matrix_Strategy
 
 on: [push, pull_request]
 
