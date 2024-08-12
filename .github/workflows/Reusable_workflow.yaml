@@ -1,7 +1,7 @@
 name: Reusable MySQL Workflow
 
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       mysql-version:
         description: 'MySQL version to use'
