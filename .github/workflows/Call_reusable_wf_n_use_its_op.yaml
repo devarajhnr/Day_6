@@ -1,4 +1,4 @@
-name: Call a reusable workflow and use its outputs
+name: Call_reusable_wf_n_use_its_op
 
 on:
   workflow_dispatch:
