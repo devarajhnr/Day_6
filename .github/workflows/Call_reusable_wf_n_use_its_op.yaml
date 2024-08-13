@@ -1,4 +1,4 @@
-name: Call_reusable_wf_n_use_its_op
+name: Call_reusable_output_wf
 
 on:
   workflow_dispatch:
